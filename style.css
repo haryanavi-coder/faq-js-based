@@ -1,0 +1,69 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    max-width: 1000px;
+    background-color: rgb(255, 215, 255);
+    margin: 40px;
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6rem;
+}
+
+.accordian{
+    background-color: white;
+    padding: 10px 16px;
+    margin-top: 20px;
+    margin-bottom: 16px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px rgb(255, 205, 255);
+    /* to make cursor as pointer when we hover on box */
+    cursor: pointer;
+}
+
+.question{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon{
+    margin-right: 16px;
+
+    /* adding animation */
+    /* make sure you write it here */
+    transition: transform 0.2s;
+}
+.active-icon{
+    /* rotating it 180degree */
+    transform: rotate(-180deg);
+}
+
+.answer{
+    /* light color of ans */
+    color: #6666;
+
+    /* colapsing the answer */
+    max-height: 0;
+    /* preventing it from seeeing or collapse state */
+    overflow: hidden;
+
+    /* animation but here on max-height */
+    transition: max-height 0.2s;
+}
+
+/* expanded state */
+/* .active-answer{
+    max-height: fit-content;
+    for animation
+    max-height: 200px;
+    but this is not full proof way content height can be more
+
+} */
+
+/* we will exclude this funda and use scrol height  */
